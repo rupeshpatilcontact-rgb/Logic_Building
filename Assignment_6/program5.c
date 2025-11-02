@@ -1,29 +1,33 @@
-// Incomplete
-
 #include<stdio.h>
 
- float Percentage(float a,float b)
- {
-    if(0 < 1000)
+float Percentage(float fTotal, float fObtained)
+{
+    float fPercent = 0.0;
+
+    if(fTotal <= 0)
     {
-        printf("");
+        printf("Invalid total marks\n");
+        return 0.0;
     }
- }   
+
+    fPercent = (fObtained / fTotal) * 100;
+    return fPercent;
+}
 
 int main()
 {
-    int iValue1 = 0, iValue2 = 0;
-    float iRet = 0.0;
+    float fTotal = 0.0, fObtained = 0.0;
+    float fResult = 0.0;
 
-    printf("Please enter total marks ");
-    scanf("%d",&iValue1);
+    printf("Please enter total marks: ");
+    scanf("%f", &fTotal);
 
-    printf("Please enter obtained marks ");
-    scanf("%d",&iValue2);
+    printf("Please enter obtained marks: ");
+    scanf("%f", &fObtained);
 
-    iRet = Percentage(iValue1,iValue2);
+    fResult = Percentage(fTotal, fObtained);
 
-    printf("Your marks is : %d\n",iRet);
+    printf("Your percentage is : %.2f%%\n", fResult);
 
     return 0;
 }
