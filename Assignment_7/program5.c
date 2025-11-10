@@ -14,7 +14,7 @@ int main()
 {
     int iValue = 0;
 
-    printf("Enter number ");
+    printf("Enter number\n");
     scanf("%d",&iValue);
 
     MultipleDisplay(iValue);
